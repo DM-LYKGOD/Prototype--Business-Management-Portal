@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genius HR tech</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4A90E2",
+              "background-light": "#F8F9FA",
+              "background-dark": "#101922",
+              "surface-light": "#ffffff",
+              "surface-dark": "#182431",
+              "text-light": "#343A40",
+              "text-dark": "#E9ECEF",
+              "subtext-light": "#7B8B9A",
+              "subtext-dark": "#98A3AF",
+              "border-light": "#E9ECEF",
+              "border-dark": "#2C3A48",
+              success: "#28a745",
+              warning: "#ffc107",
+              danger: "#dc3545",
+              info: "#17a2b8",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in-up {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+      }
+      
+      @keyframes draw-stroke {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes grow-bar {
+        from {
+          transform: scaleY(0);
+        }
+        to {
+          transform: scaleY(1);
+        }
+      }
+       @keyframes grow-bar-x {
+        from {
+          transform: scaleX(0);
+        }
+        to {
+          transform: scaleX(1);
+        }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+      @keyframes zoom-in-slow {
+        from { transform: scale(1); }
+        to { transform: scale(1.05); }
+      }
+      @keyframes ring {
+        0% { transform: rotate(0); }
+        10% { transform: rotate(15deg); }
+        20% { transform: rotate(-10deg); }
+        30% { transform: rotate(5deg); }
+        40% { transform: rotate(-2deg); }
+        50% { transform: rotate(0); }
+        100% { transform: rotate(0); }
+      }
+       @keyframes pulse-shadow {
+        0%, 100% {
+          box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
+        }
+      }
+      @keyframes spin-in {
+        from {
+          transform: rotate(-90deg) scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: rotate(0deg) scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes bounce-icon {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background-light dark:bg-background-dark">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
